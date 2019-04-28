@@ -1,0 +1,49 @@
+.PaginationPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: #a7a7a7;
+  transition: opacity 0.3s ease;
+}
+
+.PaginationPage-buttons {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+
+  button {
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    height: 22px;
+    min-width: 25px;
+    transition: 0.3s;
+    border: 1px solid #e2e3e1;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+
+    &.disable {
+      pointer-events: none;
+    }
+
+    &:not(.disable):hover,
+    &.active {
+      background-color: #ffffff;
+      border-color: aqua;
+      color: black;
+    }
+
+    &.active {
+      pointer-events: none;
+    }
+  }
+}
